@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- EDITAR: descripción específica de esta página -->
+  <meta name="description" content="Digital D.va | Productos">
+  <title>Digital D.va | Productos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+
+  <!-- EDITAR: mensaje promocional global -->
+  <div class="announcement">
+    <p>Envíos disponibles · Pregunta por nuestras promociones</p>
+    <a href="productos.html">Ver productos →</a>
+  </div>
+
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <!-- EDITAR: logo y nombre del emprendimiento -->
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <img src="https://lh3.googleusercontent.com/d/1M7lBTkTXuFm2Ev7QypkeECYuogw4AdeE" alt="Logo de Digital D.va" class="brand-mark-img">
+        <span class="brand-copy">
+          <strong>Digital D.va</strong>
+          <small>Tu estilo, tu imagen!</small>
+        </span>
+      </a>
+
+
+      <button class="icon-button menu-toggle" id="menuToggle" type="button"
+              aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+
+      <ul class="nav-menu" id="navMenu"><li><a class="nav-link " href="index.html">Inicio</a></li>
+<li><a class="nav-link " href="nosotros.html">Nosotros</a></li>
+<li><a class="nav-link active" href="productos.html">Productos</a></li>
+<li><a class="nav-link " href="opiniones.html">Opiniones</a></li>
+<li><a class="nav-link " href="chatbot.html">Chatbot</a></li>
+<li><a class="nav-link " href="contacto.html">Contacto</a></li></ul>
+
+
+      <div class="nav-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Cambiar tema">
+          <span id="themeIcon">☾</span>
+        </button>
+        <button class="cart-button" id="openCart" type="button" aria-label="Abrir carrito">
+          <span>🛒</span><span class="cart-label">Carrito</span><span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <main id="contenido">
+
+
+<section class="page-hero compact">
+  <div class="container page-hero-content reveal">
+    <span class="eyebrow">02 · Catálogo</span>
+    <h1>Productos hechos para <span>destacar.</span></h1>
+    <p>Explora nuestras soluciones y agrega al carrito las que más te interesen.</p>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <!-- EDITAR: puedes cambiar categorías y productos directamente en este HTML -->
+    <div class="catalog-toolbar">
+      <div>
+        <span class="eyebrow">Catálogo actual</span>
+        <h2>Elige tu próximo favorito.</h2>
+      </div>
+      <select id="productFilter" aria-label="Filtrar productos">
+        <option value="all">Todos</option>
+        <option value="Ropa">Ropa</option>
+        <option value="accesorios">Accesorios</option>
+        <option value="hogar">Hogar</option>
+      </select>
+    </div>
+
+
+    <div class="product-grid" id="productGrid">
+      <!-- EDITAR: cada tarjeta representa un producto. data-category debe coincidir con el filtro -->
+      <article class="product-card reveal" data-category="Ropa">
+        <div class="product-image">
+          <img src="https://lh3.googleusercontent.com/d/15MznufKhrK8u0gCm6PsG8m1iARG_tMqj" alt="Producto tecnológico">
+          <span class="product-tag">Destacado</span>
+        </div>
+        <div class="product-info">
+          <small>Ropa</small>
+          <h3>Butterfly y2k Baggy Pants</h3>
+          <!-- EDITAR: descripción, precio y datos del producto -->
+          <p>Pantalones comodos y Estilizados, potencia tu estilo, con cristales incrustrados en formas de mariposas, usalos y aumenta tu nivel.</p>
+          <div class="product-bottom">
+            <strong>$80.000</strong>
+            <button class="button button-small add-to-cart" type="button" data-name="Smart Kit" data-price="49900">Agregar</button>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="product-card reveal" data-category="accesorios">
+        <div class="product-image">
+          <img src="https://lh3.googleusercontent.com/d/1MsaQkqjhjX0dIrnwrhZ1X_-NB-feHc7M
+          " alt="Accesorio tecnológico">
+          <span class="product-tag">Nuevo</span>
+        </div>
+        <div class="product-info">
+          <small>Accesorios</small>
+          <h3>My Little Pony Especial Edition Purse BAG.</h3>
+          <p>La nueva coleccion conjunto la reconocida marca Hasbro, nos trae este Bolso inspirado en My little Pony, Friendship Is Magic!.</p>
+          <div class="product-bottom">
+            <strong>$134.900</strong>
+            <button class="button button-small add-to-cart" type="button" data-name="Tech Pack" data-price="34900">Agregar</button>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="product-card reveal" data-category="hogar">
+        <div class="product-image">
+          <img src="https://lh3.googleusercontent.com/d/1r-o14i9Em3jadfh3pQCS-8GUW0D5xE6v" alt="Solución tecnológica para el hogar">
+        </div>
+        <div class="product-info">
+          <small>Hogar</small>
+          <h3>Pink Baggy Pants</h3>
+          <p>Pantalones grandes y estilizados, y bonitos, inspirados en la estetica Street wear, con varios bolsillos y correas multiusos.</p>
+          <div class="product-bottom">
+            <strong>$89.900</strong>
+            <button class="button button-small add-to-cart" type="button" data-name="Home Control" data-price="69900">Agregar</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- EDITAR: información de compra real del emprendimiento -->
+<section class="section section-soft">
+  <div class="container mini-info-grid">
+    <div><strong>01</strong><h3>Elige</h3><p>Selecciona los productos que te interesan.</p></div>
+    <div><strong>02</strong><h3>Consulta</h3><p>Revisa disponibilidad y detalles con nuestro equipo.</p></div>
+    <div><strong>03</strong><h3>Recibe</h3><p>Coordinamos la entrega según las condiciones del emprendimiento.</p></div>
+  </div>
+</section>
+
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Digital D.va</strong><p>Tu estilo, tu imagen!</p></div>
+      <div class="footer-links">
+        <a href="nosotros.html">Nosotros</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <small>© <span class="current-year"></span> Digital D.va · Proyecto de emprendimiento</small>
+    </div>
+  </footer>
+</body>
+</html>
+
